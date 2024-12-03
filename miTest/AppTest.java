@@ -21,9 +21,9 @@ class AppTest {
         Paciente paciente = new Paciente("Maria", -5, "P12346");
         try {
             paciente.verificarEdad();
-            fail("Se esperaba una excepción para una edad negativa.");
+            fail("Se esperaba una excepcion para una edad negativa.");
         } catch (RangoException e) {
-            assertEquals("Edad no válida: -5", e.getMessage());
+            assertEquals("Edad no valida: -5", e.getMessage());
         }
     }
 
@@ -34,7 +34,7 @@ class AppTest {
             paciente.verificarEdad();
             fail("Se esperaba una excepcion para una edad mayor que el limite superior.");
         } catch (RangoException e) {
-            assertEquals("Edad no válida: 130", e.getMessage());
+            assertEquals("Edad no valida: 130", e.getMessage());
         }
     }
 
@@ -44,7 +44,7 @@ class AppTest {
         try {
             paciente.verificarEdad();
         } catch (RangoException e) {
-            fail("No se esperaba una excepciin para una edad en el limite superior.");
+            fail("No se esperaba una excepcion para una edad en el limite superior.");
         }
     }
 

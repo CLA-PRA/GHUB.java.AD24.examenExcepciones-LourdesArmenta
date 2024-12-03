@@ -1,20 +1,15 @@
 package miPrincipal;
-public class Paciente extends Persona implements Identificable {
+//cree una clase paciente que herede de persona e implemente el metofo de la interfase Identificable
+public class Paciente  {
     private String idPaciente;
 
-    public Paciente(String nombre, int edad, String idPaciente) {
-        super(nombre, edad);
-        this.idPaciente = idPaciente;
-    }
+    //coloque el contructor
 
-    @Override
-    public String getId() {
-        return idPaciente;
-    }
+   //coloque los getter y setter
 
-    public void setIdPaciente(String idPaciente) {
-        this.idPaciente = idPaciente;
-    }
+   //sobre escriba el metodo getId
+
+   
 
     
 
@@ -23,14 +18,20 @@ public class Paciente extends Persona implements Identificable {
         return "nombre: "+super.getNombre()+" edad: "+super.getEdad()+"id: "+ idPaciente;
     }
 
-    @Override
-    public void verificarEdad() throws RangoException {
-        if (this.getEdad() < 0 || this.getEdad() > 120) {
-            throw new RangoException("Edad no válida: " + this.getEdad());
-        } else {
-            System.out.println("Edad " + this.getEdad() + " esta dentro del rango permitido.");
-        }
-    }
+    /*
+     * El método verificarEdad en la clase miPrincipal.Paciente
+     *  verifica si la edad del paciente esta dentro de un 
+     * rango valido (entre 0 y 120 anios).
+     *  Si la edad es menor que 0 o mayor que 120, 
+     * lanza una excepcion de tipo miPrincipal.RangoException 
+     * con un mensaje indicando que la edad no es valida. Si la edad esta dentro del
+     *  rango permitido, imprime un mensaje indicando que la edad esta dentro del rango permitido.
+     */
+
+     //sobre escriba el metodo verificarEdad
+     //que es un metodo abstracto de la clase Persona
+
+    
 
 
     

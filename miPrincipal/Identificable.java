@@ -1,4 +1,4 @@
 package miPrincipal;
-public interface Identificable {
-    String getId();
-}
+//cree una interface de nombre identificable con un metodo de nombre getId
+
+
